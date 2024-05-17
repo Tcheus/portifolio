@@ -1,0 +1,465 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+      
+}
+
+body{
+    background-color: #000;
+    height: 100vh;/*Fundo do site*/
+}
+.inicio{
+    max-width: 1280px;
+    margin: 0 auto;
+
+    /*Distancias dos icones*/
+}
+
+.texto-de-inicio{
+    color: white;
+}
+
+.flex{
+    display: flex;
+}
+
+.botão-de-contato button{
+    padding: 10px 40px;
+    font-size: 19px;
+    font-weight: 650;
+    background-color: #A020F0;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s;
+
+}
+/*Cabeçalho*/
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+header{
+    padding: 0px 4%;
+    position: fixed;
+    background-color: #000000b6;
+    width: 100%;
+    z-index: 99999;
+}
+
+header .inicio{
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+header a {
+    color: #979797;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header nav.menu-PC a:hover {
+    color: rgb(219, 0, 201);
+    transform: scale(1.25);
+    
+}
+
+header nav.menu-PC ul{
+    list-style-type: none;
+    display: flex;
+}
+
+
+header nav.menu-PC ul li{
+    display: inline-block;
+    padding: 0 35px;
+}
+
+/*CSS Mobile*/
+.btn-abrir-menu img{
+    color: #A020F0;
+    font-size: 40px;
+}
+
+
+.btn-abrir-menu{
+    display: none;
+}
+
+.mobile{
+    background-color: #000;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .3s;
+
+}
+
+.mobile.abrir-menu{
+    width: 70%;
+}
+
+.mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+}
+
+.mobile .btn-fecha{
+    padding: 20px 4%;
+}
+
+.mobile .btn-fecha img{
+    color: #A020F0;
+    font-size: 30px;
+}
+
+.mobile nav ul{
+    text-align: right;
+}
+
+.mobile nav ul li a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+}
+
+.mobile nav ul li a:hover{
+    background-color: #A020F0;
+    color: #000;
+}
+
+.overlay-menu{
+    background-color: #000000c5;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+
+
+button:hover, form .btn-enviar input:hover{
+    box-shadow: 0px 0px 20px #A020F0;
+    transform: scale(1.25);
+}
+
+/*CSS do começo*/
+section.topo{
+    padding: 40px 4%;
+}
+
+section.topo .flex{
+    position: center;
+    gap: 60px;
+}
+
+.topo h1{
+    color: aliceblue;
+    font-size: 43px;
+    line-height: 40px;
+}
+
+
+.topo .texto-de-inicio h1 span{
+    color: #A020F0;
+
+}
+
+.topo .texto-de-inicio p{
+    color: rgb(254, 240, 255);
+    margin: 40px 0;
+    font-size: 25px;
+}
+.topo .texto-de-inicio h3{
+    color: rgb(255, 255, 255);
+    margin: 17% 0;
+    font-size: 15px;
+}
+
+.topo .img-inicio img{/*Anição da minha imagem*/
+    position: relative;
+    animation: animacao 2s ease-in-out infinite alternate;
+    border-radius: 40px;
+}
+
+@keyframes animacao{/*Anição da imagem do app*/
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+#footer_copyright {
+    color: #000;
+    display: flex;
+    justify-content: center;
+    background-color: #A020F0;
+    font-size: 20px;
+    padding: 30px 4%;
+    font-weight: 200;
+    margin: 0%;
+}
+
+/*CSS sobre*/
+section.sobre{
+    padding: 40px 4%;
+
+}
+
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .texto-sobre{
+    color: #fff;
+
+}
+
+.sobre .texto-sobre h2{
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.sobre .texto-sobre h2 span{
+    color: #A020F0;
+    display: block;
+}
+
+.sobre .texto-sobre p{
+    font-size: 25px;
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.sobre .texto-sobre p span{
+    color: #A020F0;
+}
+
+/*Portfólio*/
+select.Portfólio{
+    padding: 40px 4%;
+}
+section.Portfólio .flex{
+    align-items: center;
+    gap: 60px;
+}
+
+.Portfólio .texto-port{
+    color: #fff;
+}
+
+.Portfólio .texto-port h1{
+    font-size: 37px;
+    line-height: 30px;
+    margin-bottom: 30px;
+    padding: 20px 4%;
+}
+
+.Portfólio .texto-port h2{
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+    padding: 40px 4%;
+}
+.Portfólio .texto-port h2 span{
+    color: #A020F0;
+    display: block; 
+}
+
+.Portfólio .texto-port p{
+    font-size: 25px;
+    margin: 30px 0;
+    text-align: justify;
+}
+
+.Portfólio .img-port img{
+    position: relative;
+    animation: animacao 2s ease-in-out infinite alternate;
+    border-radius: 40px;
+}
+
+@keyframes animacao{/*Anição da imagem do app*/
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+.sobre .img-sobre img{
+    border-radius: 10%; 
+}
+
+/*Formação*/
+section .formacao{
+    padding: 40px 4%;
+}
+
+section.formacao .flex{
+    align-items: center;
+    gap: 60px;
+}
+
+.formacao .texto-formacao{
+    color: #fff;
+}
+
+.formacao .texto-formacao h1{
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+    padding: 10% 4%;
+}
+
+.formacao .texto-formacao p{
+    font-size: 25px;
+    margin: 30px 0;
+    text-align: justify;
+}
+
+.formacao .texto-formacao h1 span{
+    color: #A020F0;
+    display: block; 
+}
+
+.formacao .img-formacao{
+    position: relative;
+    animation: animacao 2s ease-in-out infinite alternate;
+    border-radius: 80px;
+}
+
+.formacao .img-formacao img{
+    border-radius: 10%
+    
+}
+
+section .formulario{
+    padding: 40px 4%;
+}
+
+.formulario .titulo-formulario{
+    color: #fff;
+}
+
+.formulario .titulo-formulario h2{
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+    padding: 40px 4%;
+    text-align: center;
+}
+
+.formulario .titulo-formulario h2 span{
+    color: #A020F0;
+}
+
+/*CSS do Formulario*/
+
+section .formulario{
+    padding: 80px 4%;
+}
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+form input, form textarea{
+    width: 100%;
+    background-color: #3b3b3b;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+form textarea{
+    resize: none;
+    max-height: 200px;
+}
+
+form .btn-enviar{
+    margin-top: 10px;
+    text-align: center;
+}
+
+form .btn-enviar input{
+    width: 120px;
+    background-color: #A020F0;
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+@media screen and (max-width: 1020px){
+    /*classes gerais*/
+    .flex{
+        flex-direction: column;
+    }
+    
+    .topo .flex{
+        flex-direction: column-reverse;
+    }
+
+    .formacao .flex{
+        flex-direction: column-reverse;
+    }
+
+    /*Menu PC*/
+    .menu-PC{
+        display: none;
+    }
+
+    .botão-de-contato{
+        display: none;
+    }
+
+    /*Topo*/
+    section.topo{
+        padding: 20px 8%;
+    }
+    .topo h1{
+        font-size: 33px;
+        position: relative;
+    }
+
+    .topo .img-inicio img{
+        width: 100%;
+    }
+    .sobre .texto-sobre h2{
+        font-size: 33px;
+    }
+
+    .btn-abrir-menu{
+        display: block;
+    }
+}
