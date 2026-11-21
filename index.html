@@ -3,184 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <script src="js/menu.js" defer></script>
-    <link rel="icon" href="resources/eu.PNG">
+    <title>Matheus Alencar | Portfólio</title>
+    <meta name="description" content="Portfólio de Matheus Alencar — Analista de Logística e desenvolvedor graduado em Análise e Desenvolvimento de Sistemas. Conheça meus projetos e fale comigo.">
+    <meta name="theme-color" content="#0a0a0f">
 
-    <title>Portfólio Pessoal</title>
+    <!-- Pré-visualização ao compartilhar o link (WhatsApp, LinkedIn etc.) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Matheus Alencar | Portfólio">
+    <meta property="og:description" content="Projetos, ferramentas e formação de Matheus Alencar.">
+    <meta property="og:image" content="resources/eu.webp">
+
+    <link rel="icon" type="image/png" href="resources/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script>document.documentElement.classList.add('js');</script>
+    <script src="js/menu.js" defer></script>
 </head>
 <body>
-    
-    <header>
-        <div class="inicio"><!--Cabeçalho-->
-            <div class="logo">
-                <a href="#">
-                    <img src="resources/logo_portifolio.png" alt="Minha Foto" width="300">
-                </a>
-            </div><!--LogoTipo-->
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
 
-            <nav class="menu-PC">
+    <!-- ===== Cabeçalho ===== -->
+    <header class="cabecalho" id="cabecalho">
+        <div class="inicio">
+            <a href="#topo" class="logo" aria-label="Voltar ao início">
+                <img src="resources/logo_portifolio.png" alt="Portfólio" width="180" height="90">
+            </a>
+
+            <nav class="menu-PC" aria-label="Menu principal">
                 <ul>
                     <li><a href="#sobre">Sobre mim</a></li>
-                    <li><a href="#portifolio">Portfólio</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
                     <li><a href="#formacao">Formação</a></li>
                 </ul>
             </nav>
-            
-            <div class="botão-de-contato">
-                <a href="#contato">
-                    <button>Contato</button>
-                </a>
-            </div>
 
-            <div class="btn-abrir-menu">
-                <img src="resources/menu_lateral.png" width="60" id="btn-menu" alt="Menu Lateral">
-            </div>
+            <a href="#contato" class="botao botao-header">Contato</a>
 
-            <div class="mobile" id="mobile">
-                <div class="btn-fechar">
-                    <img src="resources/menu_lateral.png" width="60" alt="Fechar Menu">
-                </div>
-
-                <nav>
-                    <ul>
-                        <li><a href="#sobre">Sobre mim</a></li>
-                        <li><a href="#portifolio">Portfólio</a></li>
-                        <li><a href="#formacao">Formação</a></li>     
-                        <li><a href="#contato">Contato</a></li>     
-                    </ul>
-                </nav>
-            </div>
-            <div class="overlay-menu" id="overlay-menu"></div>
-        </div><!--tela de inicio -->
+            <button class="btn-abrir-menu" id="btn-menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
     </header>
 
-    <main>
-        <section class="topo">
-            <div class="inicio">
-                <div class="flex">
-                    <div class="texto-de-inicio">
-                        <br><br><br><br><br><br><br>
-                        <h1>SEJA BEM VINDO AO MEU PORTFOLIO <span>;)</span></h1>
-                        <p>Aqui você encontrará todos os meus projetos, todos meus conhecimentos e futuros conhecimentos.</p>
-                        <p>Quer me conhecer melhor? Só entrar em contato!</p>
-                    
-                        <div class="botão-de-contato">
-                            <a href="#contato">
-                                <button>Vamos Conversar?</button>
-                            </a>
-                            
-                            <div class="img-inicio">
-                                <img src="resources/eu.PNG" width="400" alt="Minha Foto">
-                            </div>
-                        </div>
-                    </div><!--Quando for Celular-->
-                </div><!--texto de inicio-->
-            </div><!--inicio-->
-        </section><!--Começo do site-->
+    <!-- ===== Menu do celular ===== -->
+    <div class="mobile" id="mobile" aria-hidden="true">
+        <button class="btn-fechar" id="btn-fechar" aria-label="Fechar menu">&times;</button>
+        <nav aria-label="Menu do celular">
+            <ul>
+                <li><a href="#sobre">Sobre mim</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="overlay-menu" id="overlay-menu"></div>
 
+    <main id="conteudo">
+
+        <!-- ===== Início ===== -->
+        <section class="topo" id="topo">
+            <div class="inicio flex">
+                <div class="texto-de-inicio revelar">
+                    <p class="etiqueta">Olá, eu sou o Matheus 👋🏻</p>
+                    <h1>Seja bem-vindo ao meu <span>portfólio ;)</span></h1>
+                    <p>Aqui você encontra meus projetos, o que já aprendi e o que ainda vou aprender.</p>
+                    <p>Quer me conhecer melhor? É só entrar em contato!</p>
+                    <div class="acoes">
+                        <a href="#contato" class="botao">Vamos conversar?</a>
+                        <a href="#portfolio" class="botao botao-contorno">Ver projetos</a>
+                    </div>
+                </div>
+
+                <div class="img-inicio revelar">
+                    <img src="resources/eu.webp" width="700" height="917" alt="Foto de Matheus Alencar" fetchpriority="high">
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Sobre mim ===== -->
         <section class="sobre" id="sobre">
-            <div class="inicio">
-                <div class="flex">
-                    <div class="img-sobre">
-                        <img src="resources/foto_no_espelho.jpg" width="400" alt="Foto no espelho">
-                    </div><!--Imagem sobre-->
-                    <div class="texto-sobre">
-                        <h2>Olá, prazer, me chamo<span> Matheus Alencar 👋🏻</span></h2>
-                            <p>Vamos lá... Como você já sabe, me chamo Matheus! Tenho 23 anos, sou um verdadeiro sonhador e muito determinado a crescer.</p>
+            <div class="inicio flex">
+                <div class="img-sobre revelar">
+                    <img src="resources/foto_no_espelho.webp" width="700" height="937" alt="Matheus tirando foto no espelho" loading="lazy">
+                </div>
+                <div class="texto-sobre revelar">
+                    <h2>Prazer, me chamo <span>Matheus Alencar</span></h2>
+                    <p>Vamos lá... Tenho 23 anos, sou um verdadeiro sonhador e muito determinado a crescer.</p>
+                    <p>Cresci em Carapicuíba e sempre fui uma criança muito curiosa, que passava horas desmontando e montando carrinhos de controle remoto (nem sempre dava certo na hora de remontar, <span>rs!</span>).</p>
+                    <p>Essa paixão por entender como as coisas funcionam me transformou em um entusiasta da tecnologia. Hoje, meu desafio favorito é montar computadores do zero. Atualmente trabalho como <span>Analista de Logística</span>, aplicando meus conhecimentos em tecnologia diretamente nas rotinas operacionais da área.</p>
 
-                            <p>Cresci em Carapicuíba e sempre fui uma criança muito curiosa, que passava horas desmontando e montando carrinhos de controle remoto (Nem sempre dava certo na hora de remontar, <span>rs!</span>).</p>
-                            
-                            <p>Essa paixão por entender como as coisas funcionam me transformou em um entusiasta da tecnologia. Hoje, o meu desafio favorito é montar computadores do zero. Atualmente, trabalho como <span>Analista de Logística</span>, alinhando meus conhecimentos em tecnologia diretamente às rotinas operacionais da área.</p>
-                    </div><!--Texto Sobre-->
-                </div><!--Flex-->
-            </div><!--inicio-->
-        </section> <!--Sobre mim-->
-
-        <section class="Portfólio" id="portifolio">
-            <div class="inicio">
-                <div class="flex">
-                    <div class="texto-port">
-                        <h2>Meu <span>Portfólio ✍🏽</span></h2>
-                        <h1>App Dieta</h1>
-                        <p>Desenvolvido para o trabalho da Universidade Uninter, foi criado um APP para aparelhos Android.</p>
-                        <p>Um APP do administrador, e outro para o usuário que estará praticando a dieta!</p>
-                    </div>
-                    
-                    <div class="img-port">
-                        <img src="resources/logo_dos_apps.jpg" width="300" alt="Logo dos Apps">   
-                    </div>
+                    <ul class="destaques">
+                        <li><strong>ADS</strong><small>Graduado pela Uninter</small></li>
+                        <li><strong>Logística</strong><small>Analista na operação</small></li>
+                        <li><strong>Hardware</strong><small>Monto PCs do zero</small></li>
+                    </ul>
                 </div>
             </div>
-        </section><!--Portifolio-->
+        </section>
 
-        <section class="Portfólio">
+        <!-- ===== Portfólio ===== -->
+        <section class="portfolio" id="portfolio">
             <div class="inicio">
-                <div class="flex">
-                    <div class="texto-port">
-                        <h1>Matheus Tools</h1>
-                        <p>Ferramentas Desenvolvidas para facilitar o dia a dia</p>
-                        <h2><span>Ferramentas:</span></h2>
-                        <p>Encurtador de Links</p>
-                        <p>Conversor de Videos do Youtube</p>
-                        <p>Conversor de PDF</p>
-                        <p>Conversor de Imagens</p>
-                        <p>Biblioteca Folium</p>
-                        <p>Gerador de QRCode</p>
-                        <p>Gerador de Senhas</p>
-                        <p>Conversor de Excel</p>
-                        <p>Calculadora Bancária</p>
-                        <p>Conversor de Moedas</p>
-                    </div>
-                   
-                    <div class="img-port">
-                        <!-- Corrigido o caminho para a pasta resources -->
-                        <img src="resources/matheus_tools.PNG" width="300" alt="Matheus Tools">   
-                    </div>
-                </div>
-            </div>
-        </section><!--Portifolio 2-->
+                <h2 class="titulo-secao revelar">Meu <span>Portfólio ✍🏽</span></h2>
 
+                <article class="projeto revelar">
+                    <div class="projeto-img">
+                        <img src="resources/logo_dos_apps.jpg" width="720" height="472" alt="Logos dos aplicativos App Dieta" loading="lazy">
+                    </div>
+                    <div class="projeto-texto">
+                        <span class="tag">Android · Projeto acadêmico</span>
+                        <h3>App Dieta</h3>
+                        <p>Desenvolvido para um trabalho da Universidade Uninter: um sistema com dois aplicativos Android.</p>
+                        <p>Um app para o administrador e outro para o usuário que está praticando a dieta.</p>
+                    </div>
+                </article>
+
+                <article class="projeto projeto-invertido revelar">
+                    <div class="projeto-img projeto-img-vertical">
+                        <img src="resources/matheus_tools.png" width="248" height="649" alt="Menu do Matheus Tools com a lista de ferramentas" loading="lazy">
+                    </div>
+                    <div class="projeto-texto">
+                        <span class="tag">Web · Utilidades</span>
+                        <h3>Matheus Tools</h3>
+                        <p>Ferramentas desenvolvidas para facilitar o dia a dia, reunidas em um só lugar:</p>
+                        <ul class="ferramentas">
+                            <li>🔗 Encurtador de links</li>
+                            <li>▶️ Conversor de vídeos do YouTube</li>
+                            <li>📄 Conversor de PDF</li>
+                            <li>🖼️ Conversor de imagens</li>
+                            <li>🗺️ Biblioteca Folium</li>
+                            <li>📱 Gerador de QR Code</li>
+                            <li>🔐 Gerador de senhas</li>
+                            <li>📊 Conversor de Excel</li>
+                            <li>🏦 Calculadora bancária</li>
+                            <li>💰 Conversor de moedas</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===== Formação ===== -->
         <section class="formacao" id="formacao">
-            <div class="inicio">
-                <div class="flex"> 
-                    <div class="img-formacao">
-                        <img src="resources/logo_uninter.jpg" width="300" alt="Logo Uninter">
-                    </div>
-                    <div class="texto-formacao">
-                        <h1>Minha <span>Formação 👨🏻‍🎓</span></h1>
-                        <p>Atualmente sou Graduado em Análise e Desenvolvimento de Sistemas na Uninter</p>
+            <div class="inicio flex">
+                <div class="img-formacao revelar">
+                    <img src="resources/logo_uninter.jpg" width="623" height="623" alt="Logo da Uninter" loading="lazy">
+                </div>
+                <div class="texto-formacao revelar">
+                    <h2>Minha <span>Formação 👨🏻‍🎓</span></h2>
+                    <div class="cartao-formacao">
+                        <span class="tag">Graduação · Concluída</span>
+                        <h3>Análise e Desenvolvimento de Sistemas</h3>
+                        <p>Centro Universitário Internacional — Uninter</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ===== Contato ===== -->
         <section class="formulario" id="contato">
-            <div class="flex">
-                <div class="inicio">
-                    <div class="titulo-formulario">
-                        <h2>VAMOS <span>CONVERSAR?</span></h2>
-                        <!-- Corrigida a duplicidade da tag <form> -->
-                        <form action="https://formsubmit.co/alencarmatheus310@gmail.com" method="POST">
-                            <input type="hidden" name="_captcha" value="false">
-                            <input type="text" name="name" placeholder="Seu nome:" required>
-                            <input type="email" name="email" placeholder="Seu email:" required>
-                            <textarea name="message" placeholder="Sua mensagem" required></textarea>
-                            <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
-                        </form>
-                    </div>
-                </div>
-            </div>    
-        </section><!--Formulario-->
+            <div class="inicio revelar">
+                <h2 class="titulo-secao">Vamos <span>conversar?</span></h2>
+                <p class="subtitulo">Mande uma mensagem que eu respondo o quanto antes.</p>
 
+                <form id="form-contato" action="https://formsubmit.co/alencarmatheus310@gmail.com" method="POST">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_subject" value="Nova mensagem pelo portfólio!">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="text" name="_honey" class="escondido" tabindex="-1" autocomplete="off">
+
+                    <label for="nome">Seu nome</label>
+                    <input type="text" id="nome" name="name" placeholder="Como posso te chamar?" autocomplete="name" required>
+
+                    <label for="email">Seu e-mail</label>
+                    <input type="email" id="email" name="email" placeholder="voce@exemplo.com" autocomplete="email" required>
+
+                    <label for="mensagem">Sua mensagem</label>
+                    <textarea id="mensagem" name="message" rows="5" placeholder="Escreva aqui..." required></textarea>
+
+                    <button type="submit" class="botao">Enviar</button>
+                    <p class="status-form" id="status-form" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
     </main>
-<br>
+
     <footer id="footer_copyright">
-    
-        Portfólio - Matheus © 2026
-
+        <p>Portfólio — Matheus Alencar © <span id="ano">2026</span></p>
+        <a href="#topo" class="voltar-topo">Voltar ao topo ↑</a>
     </footer>
-
 </body>
 </html>
